@@ -1,0 +1,15 @@
+com\pruthvi\mapper\ServiceMapperImpl.class
+com\pruthvi\service\DepartmentApiService.class
+com\pruthvi\dto\StudentInfo.class
+com\pruthvi\entity\DepartmentEntity.class
+com\pruthvi\entity\StudentDetailEntity.class
+com\pruthvi\mapper\ServiceMapper.class
+com\pruthvi\repository\DepartmentEntityRepo.class
+com\pruthvi\dto\StudentInfoResponse.class
+com\pruthvi\SpringProjectApplicationRestApiApplication.class
+com\pruthvi\controller\StudentAccountsAPIControllerImpl.class
+com\pruthvi\dto\DepartmentInfo.class
+com\pruthvi\dto\DepartmentInfoResponse.class
+com\pruthvi\service\StudentDetailsApiService.class
+com\pruthvi\repository\StudentEntityRepo.class
+com\pruthvi\controller\StudentAccountsAPIController.class

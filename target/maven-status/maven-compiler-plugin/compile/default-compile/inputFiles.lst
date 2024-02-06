@@ -1,0 +1,14 @@
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\controller\StudentAccountsAPIControllerImpl.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\dto\StudentInfoResponse.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\dto\StudentInfo.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\entity\DepartmentEntity.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\service\StudentDetailsApiService.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\dto\DepartmentInfo.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\dto\DepartmentInfoResponse.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\repository\StudentEntityRepo.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\controller\StudentAccountsAPIController.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\repository\DepartmentEntityRepo.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\SpringProjectApplicationRestApiApplication.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\service\DepartmentApiService.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\entity\StudentDetailEntity.java
+D:\STS WorkSpace\SpringProjectApplicationRestAPI\src\main\java\com\pruthvi\mapper\ServiceMapper.java
