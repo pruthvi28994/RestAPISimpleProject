@@ -4,6 +4,19 @@
 
 It's simple Project , that explains how REST full application can be created by leaveraging JPA , MYSQL dependencies. Helps you in getting hands on all API methods
 
+### Steps to run the Project
+1. Download the project from GITHub
+2. Import the Project as Spring using STS
+3. Do Maven Force Update (Right click on Project > Maven > Update Project > Check the Force Update > click on Update
+4. Do a Maven Build (clean & Install) (Right click on Project > Run  As > Maven Clean & Maven Install 
+5. Wait Until project downloads all required files
+6. Make sure you have SQL installed and Schema (springrestapi) is created at Root (check application.properties for configuration)
+6. Once build is successfull , Run project as spring boot application
+
+### API Documention is done using Swagger
+Once your Project is running successfully , run below URL in Chrome for API Documention
+Swagger are build using SwaggerDoc.org dependency , Not Mandatory as far project concerned
+http://localhost:8080/api/sprint-tutorial/swagger-ui/index.html#/student-accounts-api-controller-impl/getDepartmentDetails
 
 ### Pre - Requesites (Since its Jave based application , Assuming Java is installed)
 
@@ -29,3 +42,7 @@ It's simple Project , that explains how REST full application can be created by 
 8 Mappers , How can we map DTO to Entites or Vise versa by just using @Mapper annotation
 9 How to Connect to data Base (MYSQL in this Case) (can connect to different DB , based on your configuration)
 10 Application.properties is where we define all DB properties or application related properties (such DB configuration , using custom post , JPA configuration etc)
+
+Thanks 
+for Any Clarification Kindly feel Free to Mail @ pruthvi28994@gmail.com
+Happy Coding
