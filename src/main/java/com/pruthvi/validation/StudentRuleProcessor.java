@@ -1,5 +1,6 @@
 package com.pruthvi.validation;
 
+import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,7 +37,7 @@ public class StudentRuleProcessor {
 		}
 		
 		//Validate Phone Number
-		if(requestPayload.getPhone()==null || requestPayload.getPhone()==0) {
+		if(requestPayload.getPhone()==null || requestPayload.getPhone().compareTo(BigInteger.ZERO) ==0) {
 			dataItems.add(new ErrorResponseDataItems("", "", new ArrayList<Error>(List.of(new Error("ERROR_1", "This is a Required Field", "phone")))));
 			constrainValidationResult.setOverallStatus("Failure");
 		} else if(requestPayload.getPhone().toString().length() != 10) {

@@ -1,5 +1,7 @@
 package com.pruthvi.dto;
 
+import java.math.BigInteger;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
@@ -23,17 +25,17 @@ public class StudentInfo {
 	private Integer dob;
 	
 	@JsonProperty("phone")
-	private Integer phone;
+	private BigInteger phone;
 	
 	@JsonProperty("phone2")
-	private Integer phone2;
+	private BigInteger phone2;
 	
 	@JsonProperty("aadharNo")
-	private Integer aadharNo;
+	private BigInteger aadharNo;
 
 	@JsonProperty("admissionDate")
-	private Integer admissionDate;
+	private BigInteger admissionDate;
 	
 	@JsonProperty("departmentID")
-	private Integer departmentID;
+	private BigInteger departmentID;
 }

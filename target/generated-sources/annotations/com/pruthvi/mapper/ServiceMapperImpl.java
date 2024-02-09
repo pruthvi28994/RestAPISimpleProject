@@ -4,6 +4,7 @@ import com.pruthvi.dto.DepartmentInfo;
 import com.pruthvi.dto.StudentInfo;
 import com.pruthvi.entity.DepartmentEntity;
 import com.pruthvi.entity.StudentDetailEntity;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-05T17:57:48+0530",
+    date = "2024-02-09T16:23:44+0530",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.36.0.v20231114-0937, environment: Java 17.0.9 (Eclipse Adoptium)"
 )
 @Component
@@ -23,15 +24,25 @@ public class ServiceMapperImpl implements ServiceMapper {
         StudentInfo studentInfo = new StudentInfo();
 
         if ( studentDtlEntity != null ) {
-            studentInfo.setAadharNo( studentDtlEntity.getAadharNo() );
-            studentInfo.setAdmissionDate( studentDtlEntity.getAdmissionDate() );
-            studentInfo.setDepartmentID( studentDtlEntity.getDepartmentID() );
+            if ( studentDtlEntity.getAadharNo() != null ) {
+                studentInfo.setAadharNo( BigInteger.valueOf( studentDtlEntity.getAadharNo() ) );
+            }
+            if ( studentDtlEntity.getAdmissionDate() != null ) {
+                studentInfo.setAdmissionDate( BigInteger.valueOf( studentDtlEntity.getAdmissionDate() ) );
+            }
+            if ( studentDtlEntity.getDepartmentID() != null ) {
+                studentInfo.setDepartmentID( BigInteger.valueOf( studentDtlEntity.getDepartmentID() ) );
+            }
             studentInfo.setDob( studentDtlEntity.getDob() );
             studentInfo.setFirstName( studentDtlEntity.getFirstName() );
             studentInfo.setLastName( studentDtlEntity.getLastName() );
             studentInfo.setMiddleName( studentDtlEntity.getMiddleName() );
-            studentInfo.setPhone( studentDtlEntity.getPhone() );
-            studentInfo.setPhone2( studentDtlEntity.getPhone2() );
+            if ( studentDtlEntity.getPhone() != null ) {
+                studentInfo.setPhone( BigInteger.valueOf( studentDtlEntity.getPhone() ) );
+            }
+            if ( studentDtlEntity.getPhone2() != null ) {
+                studentInfo.setPhone2( BigInteger.valueOf( studentDtlEntity.getPhone2() ) );
+            }
             studentInfo.setStudentID( studentDtlEntity.getStudentID() );
         }
 
@@ -44,15 +55,25 @@ public class ServiceMapperImpl implements ServiceMapper {
         StudentDetailEntity studentDetailEntity = new StudentDetailEntity();
 
         if ( studentInfo != null ) {
-            studentDetailEntity.setAadharNo( studentInfo.getAadharNo() );
-            studentDetailEntity.setAdmissionDate( studentInfo.getAdmissionDate() );
-            studentDetailEntity.setDepartmentID( studentInfo.getDepartmentID() );
+            if ( studentInfo.getAadharNo() != null ) {
+                studentDetailEntity.setAadharNo( studentInfo.getAadharNo().intValue() );
+            }
+            if ( studentInfo.getAdmissionDate() != null ) {
+                studentDetailEntity.setAdmissionDate( studentInfo.getAdmissionDate().intValue() );
+            }
+            if ( studentInfo.getDepartmentID() != null ) {
+                studentDetailEntity.setDepartmentID( studentInfo.getDepartmentID().intValue() );
+            }
             studentDetailEntity.setDob( studentInfo.getDob() );
             studentDetailEntity.setFirstName( studentInfo.getFirstName() );
             studentDetailEntity.setLastName( studentInfo.getLastName() );
             studentDetailEntity.setMiddleName( studentInfo.getMiddleName() );
-            studentDetailEntity.setPhone( studentInfo.getPhone() );
-            studentDetailEntity.setPhone2( studentInfo.getPhone2() );
+            if ( studentInfo.getPhone() != null ) {
+                studentDetailEntity.setPhone( studentInfo.getPhone().intValue() );
+            }
+            if ( studentInfo.getPhone2() != null ) {
+                studentDetailEntity.setPhone2( studentInfo.getPhone2().intValue() );
+            }
             studentDetailEntity.setStudentID( studentInfo.getStudentID() );
         }
 

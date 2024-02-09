@@ -31,17 +31,17 @@ public interface StudentAccountsAPIController {
 	/**
 	 * @author pruth
 	 * @param studentId
-	 * @apiNote To ADD / Modify of Student Records
+	 * @apiNote To ADD / Modify of Student Records , if StudentId is 0 then Add , else Update
 	 * @param requestPayload
 	 * @return
 	 */
 	@PutMapping("/student-service/{studentId}/student-details")
-	public ResponseEntity<StudentInfoResponse> putStudentDetails(Integer studentId,@RequestBody StudentInfo requestPayload) throws Exception;;
+	public ResponseEntity<StudentInfoResponse> putStudentDetails(@PathVariable Integer studentId,@RequestBody StudentInfo requestPayload) throws Exception;;
 
 	
 	/**
 	 * @author pruth
-	 * @apiNote To Retrieve Department Info
+	 * @apiNote To Retrieve Department Info , if Department Id is 0 , then retrieves all Departments , else specific Department
 	 * @param departmentId
 	 * @return
 	 */
@@ -50,24 +50,28 @@ public interface StudentAccountsAPIController {
 	
 	
 	/**
-	 * 
+	 * @implNote If DepartmentId is 0 , Then Operation Carried is Add , else Update
 	 * @param departmentId
 	 * @param departmentInfo
 	 * @return
 	 */
 	@PutMapping("/department-service/{departmentId}/department-details")
-	public ResponseEntity<DepartmentInfoResponse> putDepartmentDetails(Integer departmentId,@RequestBody DepartmentInfo departmentInfo);
+	public ResponseEntity<DepartmentInfoResponse> putDepartmentDetails(@PathVariable Integer departmentId,@RequestBody DepartmentInfo departmentInfo) throws Exception;
 	
 	
 	/**
-	 * 
+	 * @implNote To Delete Department Entry
 	 * @param departmentId
 	 * @return
 	 */
 	@DeleteMapping("/department-service/{departmentId}/department-details")
 	public ResponseEntity<DepartmentInfoResponse> deleteDepartmentDetail(@PathVariable Integer departmentId) throws Exception;
 	
-
+	/**
+	 * @implNote To delete student Detail
+	 * @param studentId
+	 * @return
+	 */
 	@DeleteMapping("/student-service/{studentId}/student-details")
-	public ResponseEntity<StudentInfoResponse> deleteStudentDetail(@PathVariable Integer studentId);
+	public ResponseEntity<StudentInfoResponse> deleteStudentDetail(@PathVariable Integer studentId) throws Exception;
 }

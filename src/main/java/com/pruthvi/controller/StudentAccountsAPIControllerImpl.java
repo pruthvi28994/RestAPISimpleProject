@@ -41,7 +41,7 @@ public class StudentAccountsAPIControllerImpl implements StudentAccountsAPIContr
 
 	@Override
 	public ResponseEntity<DepartmentInfoResponse> putDepartmentDetails(Integer departmentId,
-			DepartmentInfo departmentInfo) {
+			DepartmentInfo departmentInfo) throws Exception {
 		return ResponseEntity.status(HttpStatus.OK).body(departmentService.putDepartmentDetails(departmentId,departmentInfo));
 	}
 
@@ -51,7 +51,7 @@ public class StudentAccountsAPIControllerImpl implements StudentAccountsAPIContr
 	}
 
 	@Override
-	public ResponseEntity<StudentInfoResponse> deleteStudentDetail(Integer studentId) {
+	public ResponseEntity<StudentInfoResponse> deleteStudentDetail(Integer studentId) throws Exception{
 		return ResponseEntity.status(HttpStatus.OK).body(studentService.deleteStudentDetail(studentId));
 	}
 	

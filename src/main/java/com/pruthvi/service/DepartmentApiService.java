@@ -39,10 +39,16 @@ public class DepartmentApiService {
 
 	public DepartmentInfoResponse putDepartmentDetails(Integer departmentId, DepartmentInfo departmentInfo) {
 		DepartmentApiService.log.info("Entered Put Department Details Service");
+		if(departmentInfo.getDepartmentID()==null && departmentId!=0) {
+			departmentInfo.setDepartmentID(departmentId);
+		}
 		var departmentEntity = mapper.mapDepartmentDetailsInfoToEntity(departmentInfo);
-		departEntityRepo.save(departmentEntity);
+		var entityResponse = departEntityRepo.save(departmentEntity);
 		var response = new DepartmentInfoResponse();
 		response.setStatus("Success");
+		var message = departmentId == 0 ? "Student Detail Added Successfully" : "Student Detail Updated Successfully";
+		response.setMessage(message);
+		departmentInfo.setDepartmentID(entityResponse.getDepartmentID());
 		response.setDepartmentInfoDtl(departmentInfo);
 		return response;
 	}
@@ -55,6 +61,7 @@ public class DepartmentApiService {
 		departEntityRepo.deleteById(departmentId);
 		var response = new DepartmentInfoResponse();
 		response.setStatus("Success");
+		response.setMessage("Student Detail Deleted Successfully");
 		return response;
 	}
 
